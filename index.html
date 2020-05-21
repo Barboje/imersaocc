@@ -1,24 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<meta charset="UTF-8">
+
 <head>
   <title>Jéssica Defacio</title>
-  <link rel="stylesheet" type="text/css" href="CSS/estilo.css"/>
+  <link rel="stylesheet" type="text/css" href="CSS/estilo.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/8249cb0b43.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
-<header>
+  <header>
   <nav class="menu">
       <ul>
-        <li><a href="#">Sobre</a></li>
-        <li><a href="#">Portfólio</a></li>
-        <li><a href="#">Contato</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
       </ul>
-    </nav>
-
+  </nav>
+  <div>
     <h1 class="titulo">Jéssica Defacio</h1>
     <h2 class="subtitulo">Desenvolvedora Front-end Jr.</h2>
-  
-</header>
+  </div>
+
+  <script>
+
+    function typeWriter(elemento) {
+      const textoArray = elemento.innerHTML.split('');
+      elemento.innerHTML = '';
+      textoArray.forEach((letra, i) => {
+        setTimeout(() => elemento.innerHTML += letra, 75 * i);
+      });
+
+    }
+    const subtitulo = document.querySelector('.subtitulo');
+    typeWriter(subtitulo);
+
+  </script>
+
+<div class="home"><a href="#inicio"><i class="fas fa-home"></i></a></div>
+
+  </header>
+  <section class="portifolio">
+  <div class="grid">
+    <figure>
+      <img class="img-portfolio" src="../Imersao_CSS/img/portifolio.png" alt="Portifólio">
+      <figcaption>Projetos</figcaption>
+    </figure>
+    <figure>
+      <img class="img-portfolio" src="../Imersao_CSS/img/projetos-pessoais.png" alt=">Projetos Pessoais">
+      <figcaption>Projetos Pessoais</figcaption>
+    </figure>
+    <figure>
+      <img class="img-portfolio" src="../Imersao_CSS/img/aprenda-comigo.png" alt="Aprenda Comigo">
+      <figcaption>Aprenda Comigo</figcaption>
+    </figure>
+    <figure>
+      <img class="img-portfolio" src="../Imersao_CSS/img/meu-mundo.png" alt="Meu Mundo">
+      <figcaption>Meu Mundo</figcaption>
+    </figure>
+  </div>
+</section>
+<section class="contato" id="contato">
+  <h2>Contato</h2>
+	<div class="icones">
+    <a target="_blank" href="https://github.com/Barboje">
+      <i class="fab fa-github"></i>
+    </a>
+    <a target="_blank" href="https://twitter.com/_Barboje">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a target="_blank" href="https://www.linkedin.com/in/jessica-barboza-b82619104">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </div>
+  </section>
 </body>
+
 </html>

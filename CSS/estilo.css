@@ -1,10 +1,39 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
 
+/*soft reset CSS*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     background: -webkit-gradient(linear, left top, right top, from(#f5c9e8), to(#d9d8f0));
-    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-family: 'Gruppo', cursive;
+
+}
+
+/*se a tela tiver pelo menos 400px ela irá carregar esses estilos*/
+@media (min-width: 400px) {
+    body {
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 600px) {
+    body {
+        font-size: 20px;
+    }
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -12,6 +41,10 @@ body {
 
     background-color: rgb(236, 179, 236);
     box-shadow: 1px 1px 4px violet;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 9999;
 }
 
 .menu ul{
@@ -25,13 +58,27 @@ body {
 
 }
 
-a {
+.menu a {
+    display: block;
+    padding: 10px 10px;
+
+}
+
+.menu a:active,
+.menu a:hover {
     color: #a11d3e;
+    font-weight: bold;
+
+}
+
+a {
+    color: rgb(58, 51, 58);
     text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    
 }
 
 .subtitulo, .titulo {
@@ -40,7 +87,124 @@ a:hover {
 
 }
 
-.subtitulo {
-    font-size: 15pt;
+.titulo {
+    font-size: 3em;
+    font-family: 'Arizonia', cursive;
+}
 
+.subtitulo {
+    font-size: 1em;
+}
+
+.subtitulo::after {
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: pisca .7s infinite;
+}
+
+@keyframes pisca {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+    
+.home a {
+    display: flex;
+    
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    
+    padding: 0.5em;
+    margin: 0.5em;
+    
+    color: white;
+    background-color:#0D0D0D;
+    opacity: 50%;
+    transition: 1s;
+  }
+  
+.home a:hover {
+    opacity: 100%;
+  }
+
+.portifolio {
+    margin-left: 20px;
+    margin-right: 0px;
+    min-height: 100vh;
+    padding: 2em;
+}
+
+.grid {
+    display: grid;
+    grid: 2em;
+    text-align: center;
+    margin-bottom: 60px;
+
+}
+
+@media (min-width: 600px) {
+    .grid {
+        grid-template-columns: 331px 331px;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 920px) {
+    .grid {
+        grid-template-columns: repeat(3, 331px);
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1310px) {
+    .grid {
+        grid-template-columns: repeat(4, 331px);
+        justify-content: center;
+    }
+}
+.img-portfolio {
+    height: 180px;
+    width: 180px;
+    margin-bottom: 5px;
+
+}
+
+.img-portfolio:active,
+.img-portfolio:hover {
+    filter: drop-shadow(10px 10px 10px rgb(110, 57, 134));
+}
+
+.contato {
+    background-color: whitesmoke;
+    box-shadow: 1px 1px 4px violet;
+
+
+}
+
+.icones {
+
+    padding: 1em 5%;
+    display: grid;
+    gap: 0.5em;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    grid-template-columns: repeat(3,70px);
+}
+
+.contato a {
+    font-size: 1.4em;
+    color: rgb(58, 51, 58);
+    
+}
+
+.contato a:active,
+.contato a:hover {
+    color: #a11d3e;
+    text-decoration: none;
 }
