@@ -50,25 +50,21 @@ header {
 .menu ul{
     display: flex;
     justify-content: space-around;
-
 }
 
 .menu li {
     list-style: none;
-
 }
 
 .menu a {
     display: block;
     padding: 10px 10px;
-
 }
 
 .menu a:active,
 .menu a:hover {
     color: #a11d3e;
     font-weight: bold;
-
 }
 
 a {
@@ -111,7 +107,8 @@ a:hover {
         opacity: 0;
     }
 }
-    
+
+
 .home a {
     display: flex;
     
@@ -132,11 +129,36 @@ a:hover {
     opacity: 100%;
   }
 
-.portifolio {
-    margin-left: 20px;
-    margin-right: 0px;
+.portifolio, .sobre {
+    margin-left: auto;
+    margin-right: auto;
     min-height: 100vh;
     padding: 2em;
+}
+
+.sobre h2, .portifolio h2 {
+    margin-bottom: 1.5em;
+    font-size: 2em;
+
+}
+
+.sobre p {
+    margin-bottom: 1em;
+    text-indent: 1.4em;
+    text-align: justify;
+
+}
+
+.sobre .avatar {
+    float: right;
+    margin-top: -6em;
+
+}
+
+.avatar img {
+    width: 500px;
+    filter: drop-shadow(10px 10px 10px rgb(110, 57, 134));
+
 }
 
 .grid {

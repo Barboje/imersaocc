@@ -3,14 +3,14 @@
 
 <head>
   <title>Jéssica Defacio</title>
-  <link rel="stylesheet" type="text/css" href="CSS/estilo.css" />
+  <link rel="stylesheet" type="text/css" href="CSS/estilo.css"/>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/8249cb0b43.js" crossorigin="anonymous"></script>
-
+  
 </head>
 
-<body>
+<body id="inicio">
   <header>
   <nav class="menu">
       <ul>
@@ -21,7 +21,7 @@
   </nav>
   <div>
     <h1 class="titulo">Jéssica Defacio</h1>
-    <h2 class="subtitulo">Desenvolvedora Front-end Jr.</h2>
+    <h3 class="subtitulo">Desenvolvedora Front-end Jr.</h3>
   </div>
 
   <script>
@@ -34,7 +34,7 @@
       });
 
     }
-    const subtitulo = document.querySelector('.subtitulo');
+    var subtitulo = document.querySelector('.subtitulo');
     typeWriter(subtitulo);
 
   </script>
@@ -42,8 +42,25 @@
 <div class="home"><a href="#inicio"><i class="fas fa-home"></i></a></div>
 
   </header>
+
+  <section class="sobre" id="sobre">
+    <h2>Sobre</h2>
+
+    <figure class="avatar">
+      <img src="img/jebs.gif" alt="Jébs">
+    </figure>
+
+    <p>    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore, excepturi? Quaerat odit eos, in, voluptas incidunt dolor vitae beatae explicabo ratione culpa quisquam rem distinctio ab, placeat non corrupti minima. </p>
+
+
+    <p>    Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, ullam sit cupiditate possimus neque et ut nobis, ipsum aspernatur commodi eum minima reiciendis doloribus saepe voluptas maxime. Ipsam, quae quaerat.</p>
+
+  </section>
+
   <section class="portifolio" id="portifolio">
+    <h2>Projetos</h2>
   <div class="grid">
+    
     <figure>
       <img class="img-portfolio" src="img/portifolio.png" alt="Portifólio">
       <figcaption>Portifólio</figcaption>
