@@ -108,7 +108,6 @@ a:hover {
     }
 }
 
-
 .home a {
     display: flex;
     
@@ -156,10 +155,16 @@ a:hover {
 }
 
 .avatar img {
+    margin-left: 2em;
     width: 500px;
     filter: drop-shadow(10px 10px 10px rgb(110, 57, 134));
-
 }
+
+@media (min-width: 600px) {
+    .avatar img {
+      float: right;
+    }
+  }
 
 .grid {
     display: grid;
